@@ -19,7 +19,7 @@ import {
 
 export const Actions = () => {
   const { register, handleSubmit, reset, formState } = useForm();
-  const { createPlane, updatePlane } = usePlanes();
+  const { createPlane } = usePlanes();
   const toast = useToast();
 
   const onSubmit = (data) => {
@@ -39,12 +39,6 @@ export const Actions = () => {
     }
 
     reset();
-  };
-
-  const onUpdateFormSubmit = (id) => {
-    updatePlane(id, {
-      plane_x: 7,
-    });
   };
 
   return (

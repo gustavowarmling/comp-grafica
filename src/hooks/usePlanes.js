@@ -17,12 +17,12 @@ export const usePlanes = () => {
       throw new Error("Limite de aviões atingido");
     }
 
-    if (plane_x > 4 || plane_x < -4) {
-      throw new Error("Valor para X deve ser entre -4 e 4");
+    if (plane_x > 8 || plane_x < -8) {
+      throw new Error("Valor para X deve ser entre -8 e 8");
     }
 
-    if (plane_y > 4 || plane_y < -4) {
-      throw new Error("Valor para Y deve ser entre -4 e 4");
+    if (plane_y > 8 || plane_y < -8) {
+      throw new Error("Valor para Y deve ser entre -8 e 8");
     }
 
     setPlanes([

@@ -1,15 +1,15 @@
 import { Grid, GridItem, Box, Icon } from "@chakra-ui/react";
 import { MdOutlineAirplanemodeActive } from "react-icons/md";
 
-const number_of_columns = 8;
-const number_of_rows = 8;
+const number_of_columns = 16;
+const number_of_rows = 16;
 const total_elements = number_of_columns * number_of_rows;
 
 export const Radar = ({ planes }) => {
   const gridPlanes = planes.reduce((acc, plane) => {
     const planeGridData = {
-      bottom: 60 * plane.plane_y,
-      left: 60 * plane.plane_x,
+      bottom: 30 * plane.plane_y,
+      left: 30 * plane.plane_x,
       angle: plane.plane_angle,
       radius: plane.plane_radius,
     };
@@ -20,7 +20,7 @@ export const Radar = ({ planes }) => {
 
   return (
     <Grid
-      templateColumns="repeat(8, 1fr)"
+      templateColumns="repeat(16, 1fr)"
       maxW="fit-content"
       margin="0 auto"
       position="relative"
@@ -29,16 +29,16 @@ export const Radar = ({ planes }) => {
         <GridItem
           key={index}
           colSpan="1"
-          width="60px"
-          height="60px"
-          border="1px solid black"
+          width="30px"
+          height="30px"
+          border="1px solid #D3D3D3"
         />
       ))}
 
       <Box
         w={3}
         h={3}
-        background="grey"
+        background="black"
         position="absolute"
         top={240 - 6}
         left={240 - 6}
