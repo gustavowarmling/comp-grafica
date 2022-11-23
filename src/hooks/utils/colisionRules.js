@@ -34,7 +34,12 @@ export function getTimeDistance(airplaneA, airplaneB) {
 
   const xColision = ladoY / ladoX;
 
-  if (!xColision || Math.abs(xColision) === Infinity) {
+  if (
+    xColision === null ||
+    xColision === undefined ||
+    xColision === NaN ||
+    Math.abs(xColision) === Infinity
+  ) {
     return {
       riskOfColision: false,
       timeToColision: 0,
